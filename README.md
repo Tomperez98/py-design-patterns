@@ -12,3 +12,6 @@ Sample Python project setup with minimal requirements
 ```shell
 make setup
 ```
+
+## Reference
+<https://buildmedia.readthedocs.org/media/pdf/cookiecutter/latest/cookiecutter.pdf>

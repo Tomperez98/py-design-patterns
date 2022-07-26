@@ -26,7 +26,7 @@ clean: ## Cleans project folder mainly cache
 
 .PHONY: new-pattern
 new-pattern: ## Creates folder to implement new pattern
-	 poetry run cookiecutter $(PWD)/scripts/resources/new_pattern.zip
+	poetry run python scripts/gen_new_pattern.py
 
 .PHONY: lint
 lint: ## Checks code linting
