@@ -33,14 +33,13 @@ def move_test_file(pattern_slug: str, base_dir: Path) -> None:
     (base_dir / "tests" / pattern_slug / "__init__.py").touch()
 
 
-# def main(
-#     pattern_name: str = typer.Option(
-#         default=...,
-#         prompt="What's the name of the pattern you want to build",
-#         confirmation_prompt=False,
-#     )
-# ):
-def main(pattern_name: str = "Strategy") -> None:
+def main(
+    pattern_name: str = typer.Option(
+        default=...,
+        prompt="What's the name of the pattern you want to build",
+        confirmation_prompt=False,
+    )
+):
     pattern_name = pattern_name.strip()
 
     pattern_slug = (
@@ -69,5 +68,4 @@ def main(pattern_name: str = "Strategy") -> None:
 
 
 if __name__ == "__main__":
-    # typer.run(main)
-    main()
+    typer.run(main)
