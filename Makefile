@@ -24,6 +24,9 @@ clean: ## Cleans project folder mainly cache
 	rm -f coverage.xml
 	rm -rf build
 
+.PHONY: new-pattern
+new-pattern: ## Creates folder to implement new pattern
+	 poetry run cookiecutter $(pwd)/scripts/resources/new_pattern.zip
 
 .PHONY: lint
 lint: ## Checks code linting
