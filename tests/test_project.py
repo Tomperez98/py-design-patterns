@@ -1,4 +1,4 @@
-from template_project import VERSION, VERSION_SHORT
+from patterns import VERSION, VERSION_SHORT
 
 
 def test_version():

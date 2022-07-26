@@ -6,14 +6,14 @@ on:
     branches:
       - main
     paths:
-      - "template_project/**"
+      - "patterns/**"
       - "tests/**"
 
   pull_request:
     branches:
       - main
     paths:
-      - "template_project/**"
+      - "patterns/**"
       - "tests/**"
 
 jobs:
@@ -48,7 +48,7 @@ jobs:
         run: poetry install --no-interaction
 
       - name: Build coverage file
-        run: poetry run pytest --cache-clear --cov=template_project tests/ > pytest-coverage.txt
+        run: poetry run pytest --cache-clear --cov=patterns tests/ > pytest-coverage.txt
 
       - name: Comment coverage
         uses: coroo/pytest-coverage-commentator@v1.0.2
