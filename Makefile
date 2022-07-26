@@ -31,13 +31,13 @@ new-pattern: ## Creates folder to implement new pattern
 
 .PHONY: lint
 lint: ## Checks code linting
-	poetry run black --check .
+	poetry run black --check . --line-length 79
 	poetry run isort --check-only .
 	make lint-types
 
 .PHONY: format
 format: ## Formats code
-	poetry run black .
+	poetry run black . --line-length 79
 	poetry run isort .
 
 .PHONY: lint-types
