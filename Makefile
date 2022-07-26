@@ -23,6 +23,7 @@ clean: ## Cleans project folder mainly cache
 	rm -f .coverage.*
 	rm -f coverage.xml
 	rm -rf build
+	find tests patterns -empty -type d -delete
 
 .PHONY: new-pattern
 new-pattern: ## Creates folder to implement new pattern

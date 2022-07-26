@@ -14,4 +14,5 @@ make setup
 ```
 
 ## Reference
+
 <https://buildmedia.readthedocs.org/media/pdf/cookiecutter/latest/cookiecutter.pdf>
