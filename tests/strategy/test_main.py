@@ -48,7 +48,7 @@ from patterns import strategy
         ),
     ],
 )
-def test_pattern_name(
+def test_pattern(
     run_strategy: strategy.IRunBehavior,
     jump_strategy: strategy.IJumpBehavior,
     punch_strategy: strategy.IPunchBehavior,
