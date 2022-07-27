@@ -55,6 +55,8 @@ def test_pattern_name(
     expected_performance: strategy.ExerciseResults,
 ):
     a_person = strategy.Person(
-        jump=jump_strategy, punch=punch_strategy, run=run_strategy
+        jump_strategy=jump_strategy,
+        punch_strategy=punch_strategy,
+        run_strategy=run_strategy,
     )
     assert a_person.exercise() == expected_performance

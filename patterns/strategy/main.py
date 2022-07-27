@@ -12,14 +12,14 @@ class ExerciseResults:
 
 @dataclass
 class Person:
-    jump: IJumpBehavior
-    punch: IPunchBehavior
-    run: IRunBehavior
+    jump_strategy: IJumpBehavior
+    punch_strategy: IPunchBehavior
+    run_strategy: IRunBehavior
 
     def exercise(self) -> ExerciseResults:
-        jump_performance = self.jump.jump()
-        punch_performance = self.punch.punch()
-        run_performance = self.run.run()
+        jump_performance = self.jump_strategy.jump()
+        punch_performance = self.punch_strategy.punch()
+        run_performance = self.run_strategy.run()
         return ExerciseResults(
             jump_perfomance=jump_performance,
             punch_performance=punch_performance,
