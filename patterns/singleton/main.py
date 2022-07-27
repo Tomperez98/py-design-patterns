@@ -6,6 +6,11 @@ def is_singleton(cls):
     _instances: Dict = {}
 
     def get_instance(*args, **kwargs):
+        if cls in _instances:
+            raise Exception(
+                "This class is a singleton. Use the already created instance"
+                " or delete it before instanciating a new one"
+            )
         if cls not in _instances:
             _instances[cls] = cls(*args, **kwargs)
         return _instances[cls]
