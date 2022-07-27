@@ -50,3 +50,7 @@ classDiagram
     ISwim <|-- SwimFast
     ISwim <|-- SwimSlow
 ```
+
+## Common problems solutions
+
+- [**How to handle different param requirements in each strategy**](https://www.youtube.com/watch?v=UPBOOIRrl40)
