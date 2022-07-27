@@ -19,4 +19,6 @@ classDiagram
         - instance: Singleton
         get_instance()
     }
+
+    Singleton --> Singleton
 ```

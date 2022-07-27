@@ -3,12 +3,12 @@ from typing import Dict
 
 
 def is_singleton(cls):
-    instances: Dict = {}
+    _instances: Dict = {}
 
     def get_instance(*args, **kwargs):
-        if cls not in instances:
-            instances[cls] = cls(*args, **kwargs)
-        return instances[cls]
+        if cls not in _instances:
+            _instances[cls] = cls(*args, **kwargs)
+        return _instances[cls]
 
     return get_instance
 
