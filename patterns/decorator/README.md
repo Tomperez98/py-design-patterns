@@ -8,4 +8,34 @@ using decorators you can wrap objects countless number of times since **both tar
 
 ## Explanatory diagram
 
-Add diagram here (Please use mermaid)
+```mermaid
+classDiagram
+    class ConcreteComponent {
+        execute()
+    }
+
+    class Component {
+        <<interface>>
+        execute()
+    }
+
+    class BaseDecorator {
+        - wrappe: Component
+        execute()
+    }
+
+    class DecoratorA {
+        execute()
+    }
+
+    class DecoratorB {
+        execute()
+    }
+
+    Component <|-- ConcreteComponent
+    Component <|-- BaseDecorator
+    BaseDecorator *-- Component
+
+    BaseDecorator <|-- DecoratorA
+    BaseDecorator <|-- DecoratorB
+```
