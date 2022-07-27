@@ -2,8 +2,51 @@
 
 ## How it works
 
-Is about composition rather than inheritance. Defines a family of algorithms, encapsulates each one, and makes then interchangable... Makes the algorithm very independent from the clients that use it.
+**Strategy** is a behavioral design pattern that turns a set of behaviors into objects and makes them interchangable inside original context object.
+
+The original object, called **context**, holds a reference to a strategy object. The context **delegates executing the behavior to the linked strategy object**. In order to change the way the context performs its work, other objects may replace the currently linked strategy object with another one.
 
 ## Explanatory diagram
 
-Add diagram here (Please use mermaid)
+```mermaid
+classDiagram
+    class Person {
+    - sing_behavior: ISing
+    - swim_behavior: ISwim
+    }
+
+    class ISwim {
+        <<interface>>
+        swim()
+    }
+
+    class SwimFast {
+        swim()
+    }
+
+    class SwimSlow {
+        swim()
+    }
+
+    class ISing {
+        <<interface>>
+        sing()
+    }
+
+    class SingGood {
+        sing()
+    }
+
+    class SingBad {
+        sing()
+    }
+    ISing <|-- SingBad
+    ISing <|-- SingGood
+    
+    ISwim *-- Person
+    ISing *-- Person
+
+
+    ISwim <|-- SwimFast
+    ISwim <|-- SwimSlow
+```
