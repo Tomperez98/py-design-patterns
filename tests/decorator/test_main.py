@@ -67,3 +67,9 @@ def test_pattern(
         stack = service(stack)
 
     assert stack.notify() == expected_result
+
+
+def test_business_process():
+    process = decorator.BusinessProcess()
+
+    assert process.execute() == "Executing some business process"
