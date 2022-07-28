@@ -33,12 +33,14 @@ new-pattern: ## Creates folder to implement new pattern
 lint: ## Checks code linting
 	poetry run black --check . --line-length 79
 	poetry run isort --check-only . --line-length 79
+	poetry run flake8 .
 	make lint-types
 
 .PHONY: format
 format: ## Formats code
 	poetry run black . --line-length 79
 	poetry run isort . --profile black --line-length 79
+	poetry run flake8 .
 
 .PHONY: lint-types
 lint-types: ## Lint project types
