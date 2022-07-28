@@ -2,7 +2,7 @@
 name = "patterns"
 version = "0.1.0"
 description = ""
-authors = ["Tomperez98 <tomasperezalvarez@gmail.com>"]
+authors = ["Tomas Perez Alvarez <tomasperezalvarez@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -14,6 +14,8 @@ flake8 = "^4.0.1"
 black = {version = "^22.6.0", allow-prereleases = true}
 isort = "^5.10.1"
 mypy = "^0.971"
+cookiecutter = "^2.1.1"
+typer = {extras = ["all"], version = "^0.6.1"}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

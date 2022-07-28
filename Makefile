@@ -23,18 +23,24 @@ clean: ## Cleans project folder mainly cache
 	rm -f .coverage.*
 	rm -f coverage.xml
 	rm -rf build
+	find tests patterns -empty -type d -delete
 
+.PHONY: new-pattern
+new-pattern: ## Creates folder to implement new pattern
+	poetry run python scripts/gen_new_pattern.py
 
 .PHONY: lint
 lint: ## Checks code linting
-	poetry run black --check .
-	poetry run isort --check-only .
+	poetry run black --check . --line-length 79
+	poetry run isort --check-only . --line-length 79
+	poetry run flake8 .
 	make lint-types
 
 .PHONY: format
 format: ## Formats code
-	poetry run black .
-	poetry run isort .
+	poetry run black . --line-length 79
+	poetry run isort . --profile black --line-length 79
+	poetry run flake8 .
 
 .PHONY: lint-types
 lint-types: ## Lint project types

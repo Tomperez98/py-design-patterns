@@ -1,6 +1,6 @@
 # What is this?
 
-Sample Python project setup with minimal requirements
+Learning design patterns in Python
 
 ## Requirements
 
@@ -10,5 +10,11 @@ Sample Python project setup with minimal requirements
 ## How to run?
 
 ```shell
-make setup
+make new-pattern
 ```
+
+And the code the pattern sample implementation, complete de `README.md`, and do unittests
+
+## Reference
+
+<https://buildmedia.readthedocs.org/media/pdf/cookiecutter/latest/cookiecutter.pdf>
