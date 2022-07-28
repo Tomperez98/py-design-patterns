@@ -1,4 +1,4 @@
-from typing import Dict, List, Type
+from typing import Dict, List, Type, Union
 
 import pytest
 
@@ -60,7 +60,9 @@ def test_pattern(
     }
     only_with_default_notification = decorator.BusinessProcess()
 
-    stack = only_with_default_notification
+    stack: Union[
+        decorator.BusinessProcess, decorator.INotify
+    ] = only_with_default_notification
     for notification_service in desired_notification_services:
         service = available_notification_services[notification_service]
 

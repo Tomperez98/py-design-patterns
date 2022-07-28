@@ -4,9 +4,9 @@ from dataclasses import dataclass
 from patterns.bridge.strategies import IEngine
 
 
-@dataclass
 class BaseVehicle:
-    engine: IEngine
+    def __init__(self, engine: IEngine) -> None:
+        self.engine = engine
 
     @abstractmethod
     def how_you_ride(self) -> str:
