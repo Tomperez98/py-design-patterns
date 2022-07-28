@@ -40,6 +40,7 @@ def test_pattern(
     engine_type: Type[IEngine],
     expected_responses: List[str],
 ):
+
     created_vehicle = vehicle_type(engine=engine_type())
     assert created_vehicle.engine.charge_engine() == expected_responses[0]
     assert created_vehicle.how_you_ride() == expected_responses[1]
