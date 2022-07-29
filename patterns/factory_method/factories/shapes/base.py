@@ -9,14 +9,13 @@ class ShapeFactory:
         TRIANGLE = "triangle"
         CIRCLE = "circle"
 
-    @classmethod
-    def create_shape(cls, shape: str, **kwargs) -> IShape:
+    def create_shape(self, shape: str, **kwargs) -> IShape:
 
-        if shape == cls.AvailableShapes.SQUARE:
+        if shape == self.AvailableShapes.SQUARE:
             return shapes.SquareShape(**kwargs)
-        elif shape == cls.AvailableShapes.CIRCLE:
+        elif shape == self.AvailableShapes.CIRCLE:
             return shapes.CircleShape(**kwargs)
-        elif shape == cls.AvailableShapes.TRIANGLE:
+        elif shape == self.AvailableShapes.TRIANGLE:
             return shapes.TriangleShape(**kwargs)
         else:
             raise ValueError("Provided value not supported to be created")
