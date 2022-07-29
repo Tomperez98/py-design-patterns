@@ -5,7 +5,7 @@ OS = $(shell uname | tr A-Z a-z)
 
 .PHONY: test
 test: ## Run tests
-	poetry run pytest --cov=patterns tests/
+	poetry run pytest --cov-report term:skip-covered --cov-report term-missing --cov=patterns tests/
 
 
 .PHONY: clean
