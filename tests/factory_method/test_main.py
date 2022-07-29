@@ -40,3 +40,9 @@ def test_pattern(
     factory = factory_method.ShapeFactory()
     generated_shape = factory.create_shape(shape=shape, **payload)
     assert isinstance(generated_shape, expected_type)
+
+
+def test_no_available_value():
+    factory = factory_method.ShapeFactory()
+    with pytest.raises(ValueError):
+        factory.create_shape(shape="not a shape")
