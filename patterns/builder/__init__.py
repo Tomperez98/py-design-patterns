@@ -1,5 +1,11 @@
-from .main import pattern_name
+from .builders import CarBuilder, CarManualBuilder
+from .cars import Car, Manual
+from .director import Director
 
 __all__ = [
-    "pattern_name",
+    "CarBuilder",
+    "CarManualBuilder",
+    "Car",
+    "Manual",
+    "Director",
 ]
